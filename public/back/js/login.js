@@ -64,5 +64,12 @@ $(function(){
         }
       }
     })
+  });
+
+  //3. 表单重置功能
+  $("[type='reset']").on("click", function () {
+    //调用插件的重置表单的方法。
+    ///获取到表单校验实例，调用了resetForm方法，重置表单。
+    validator.resetForm();
   })
 });
