@@ -3,6 +3,12 @@
  */
 
 $(function(){
+  if(location.href.indexOf(login.html) < 0){
+
+  }
+})
+
+$(function(){
   $(window).ajaxStart(function(){
     NProgress.start();
   });
