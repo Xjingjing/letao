@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 ul {
     margin: 0;
     padding: 0;
@@ -67,6 +66,7 @@ a:link,a:visited,a:hover,a:active{
     height: 120px;
     margin-top: 20px;
 }
+
 .lt_side .nav a{
     color:#fff;
     display: block;
@@ -89,7 +89,6 @@ a:link,a:visited,a:hover,a:active{
 /*右侧功能区*/
 .lt_main{
     margin-left: 180px;
-    height: 100px;
     overflow: hidden;
     transition:margin-left 1s;
 }
@@ -128,6 +127,5 @@ a:link,a:visited,a:hover,a:active{
     right:20px;
 }
 
-#lt_modal{
 
-}
+/*内容部分*/

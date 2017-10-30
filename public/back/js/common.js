@@ -2,12 +2,22 @@
  * Created by 静 on 2017/10/29.
  */
 
+//验证用户是否登录
 $(function(){
-  if(location.href.indexOf(login.html) < 0){
-
+  if(location.href.indexOf('login.html') < 0){
+       $.ajax({
+         url:' /employee/checkRootLogin',
+         type:'get',
+         success:function(data){
+           if(data.error === 400){
+             location.href = 'login.html';
+           }
+         }
+       })
   }
-})
+});
 
+//进度条
 $(function(){
   $(window).ajaxStart(function(){
     NProgress.start();
@@ -25,7 +35,6 @@ $(function(){
     $(this).children('div').slideToggle();
   })
 });
-
 
 //header按钮功能
 $(function(){
