@@ -99,7 +99,7 @@
       <td class="col-sm-3">{{v.username}}</td>
       <td class="col-sm-3">{{v.mobile}}</td>
       <td class="col-sm-2">{{v.isDelete == 1? "启用":"禁用"}}</td>
-      <td class="col-sm-2">
+      <td class="col-sm-2" data-id="{{v.id}}">
         {{if(v.isDelete == 1)}}
         <button class="btn btn-danger btn-sm">禁用</button>
         {{/if}}
