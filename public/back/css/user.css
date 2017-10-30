@@ -1,0 +1,10 @@
+
+.lt_main table{
+   margin:0 auto;
+}
+
+.lt_main table td{
+    text-align: center;
+    border:1px solid #ccc;
+    height: 40px;
+}

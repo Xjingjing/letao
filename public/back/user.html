@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/comment.css">
+  <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
 
@@ -43,6 +44,21 @@
       <li class="active">用户管理</li>
     </ol>
   </div>
+
+  <table width=98%>
+    <thead>
+       <tr>
+         <td class="col-sm-2">序号</td>
+         <td class="col-sm-3">用户名</td>
+         <td class="col-sm-3">手机号</td>
+         <td class="col-sm-2">状态</td>
+         <td class="col-sm-2">操作</td>
+       </tr>
+    </thead>
+    <tbody>
+       <!--挖个坑-->
+    </tbody>
+  </table>
 </div>
 
 <div class="modal fade" tabindex="-1" id="lt_modal">
@@ -69,6 +85,26 @@
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/user.js"></script>
+
+  <script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+      <td class="col-sm-2">{{i+1}}</td>
+      <td class="col-sm-3">{{v.username}}</td>
+      <td class="col-sm-3">{{v.mobile}}</td>
+      <td class="col-sm-2">{{v.isDelete == 1? "启用":"禁用"}}</td>
+      <td class="col-sm-2">
+        {{if(v.isDelete == 1)}}
+        <button class="btn btn-danger btn-sm">禁用</button>
+        {{/if}}
+        {{if(v.isDelete == 0)}}
+        <button class="btn btn-primary btn-sm">启用</button>
+        {{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </script>
 </body>
 </html>
