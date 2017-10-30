@@ -28,6 +28,11 @@ a:link,a:visited,a:hover,a:active{
     position:fixed;
     top:0;
     left:0;
+    transition:left 1s;
+}
+
+.side_hide{
+    left:-180px;
 }
 
 .lt_side .title a{
@@ -86,6 +91,11 @@ a:link,a:visited,a:hover,a:active{
     margin-left: 180px;
     height: 100px;
     overflow: hidden;
+    transition:margin-left 1s;
+}
+
+.big1{
+    margin-left:0;
 }
 
 .lt_header{
@@ -95,6 +105,11 @@ a:link,a:visited,a:hover,a:active{
     position:fixed;
     left:180px;
     right:0;
+    transition:left 1s;
+}
+
+.big2{
+    left:0;
 }
 
 .lt_header span{
@@ -111,4 +126,8 @@ a:link,a:visited,a:hover,a:active{
 
 .lt_header span:nth-child(2){
     right:20px;
+}
+
+#lt_modal{
+
 }
