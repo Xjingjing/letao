@@ -13,6 +13,15 @@ $(function(){
   });
 });
 
+//分类管理
+$(function(){
+  $('.category').on('click',function(){
+    $(this).children('div').slideToggle();
+  })
+});
+
+
+//header按钮功能
 $(function(){
   $('.lt_header span:first-child').on('click',function(){
     $('.lt_side').toggleClass('side_hide');
