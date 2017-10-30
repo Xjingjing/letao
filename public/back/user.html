@@ -59,6 +59,10 @@
        <!--挖个坑-->
     </tbody>
   </table>
+  <div class="page">
+    <ul id="pagintor"></ul>
+  </div>
+
 </div>
 
 <div class="modal fade" tabindex="-1" id="lt_modal">
@@ -83,15 +87,15 @@
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
 <script src="js/common.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="js/user.js"></script>
 
   <script type="text/html" id="tpl">
     {{each rows v i}}
     <tr>
-      <td class="col-sm-2">{{i+1}}</td>
+      <td class="col-sm-2">{{(page-1)*8+i+1}}</td>
       <td class="col-sm-3">{{v.username}}</td>
       <td class="col-sm-3">{{v.mobile}}</td>
       <td class="col-sm-2">{{v.isDelete == 1? "启用":"禁用"}}</td>

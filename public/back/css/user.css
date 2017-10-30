@@ -8,3 +8,11 @@
     border:1px solid #ccc;
     height: 40px;
 }
+
+.lt_main ul li{
+    cursor: pointer;
+}
+
+.lt_main .page{
+    text-align: right;
+}
