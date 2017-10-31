@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>一级分类页</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/comment.css">
   <link rel="stylesheet" href="css/table.css">
@@ -44,16 +45,16 @@
       <li><a href="#">分类管理</a></li>
       <li class="active">一级分类</li>
     </ol>
+
+    <button class="btn addCate" style="margin-bottom: 10px;background: #fff;border:1px solid #ccc">添加分类</button>
   </div>
+
 
   <table width=98%>
     <thead>
     <tr>
-      <td class="col-sm-2">序号</td>
-      <td class="col-sm-3">用户名</td>
-      <td class="col-sm-3">手机号</td>
-      <td class="col-sm-2">状态</td>
-      <td class="col-sm-2">操作</td>
+      <td class="col-sm-3">序号</td>
+      <td class="col-sm-9">分类名称</td>
     </tr>
     </thead>
     <tbody>
@@ -66,19 +67,23 @@
 
 </div>
 
-<div class="modal fade" tabindex="-1" id="lt_modal">
+<div class="modal fade" tabindex="-1" id="add_modal">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">温馨提示</h4>
+        <h4 class="modal-title">添加一级分类</h4>
       </div>
       <div class="modal-body">
-        <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span> 确定要退出吗？</p>
+        <form id="form">
+          <div class="form-group">
+            <input type="text" id="catename" class="form-control" name="categoryName" placeholder="请输入一级分类名称">
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="log_out btn btn-primary">确定</button>
+        <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" form="form" class="confirm btn btn-primary">确定</button>
       </div>
     </div>
   </div>
@@ -87,10 +92,22 @@
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="js/common.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="js/cate1.js"></script>
+
+<script type="text/html" id="tpl1">
+  {{each rows v i}}
+  <tr>
+    <td class="col-sm-3">{{(page-1)*size+i+1}}</td>
+    <td class="col-sm-9">{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+</script>
+
+
 </body>
 </html>
