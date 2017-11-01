@@ -97,3 +97,9 @@ img{
 }
 
 
+.lt_content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position:relative;
+}
