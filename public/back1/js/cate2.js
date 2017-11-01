@@ -54,7 +54,7 @@ $(function(){
       }
     });
 
-
+  $form = $('#form');
   //点击下拉框，选取一级分类名
   $('.dropdown-menu').on('click','a',function(){
     $('#categoryId').val($(this).data('id'));
@@ -75,7 +75,6 @@ $(function(){
   });
 
   //表单验证
-  $form = $('#form');
   $form.bootstrapValidator({
     excluded:[],
     feedbackIcons: {
@@ -119,6 +118,12 @@ $(function(){
          if(data.success){
            $('#add_modal').modal('hide');
            render();
+
+           $form[0].reset();
+           $form.data("bootstrapValidator").resetForm();
+           //手动把dropdown重置，把图片的地址重置
+           $(".dropdown-text").text("请选择一级分类");
+           $(".img_box img").attr("src", "images/none.png");
          }
       }
     })
