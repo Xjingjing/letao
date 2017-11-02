@@ -75,6 +75,6 @@ $('.search-btn').on('click',function(){
 
   $('.search-txt').val("");
 
-  location.href = "searchList.html&key="+txt;
+  location.href = "searchList.html?key="+txt;
 
 });
