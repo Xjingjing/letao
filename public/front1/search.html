@@ -24,10 +24,8 @@
     <div class="mui-scroll-wrapper">
       <div class="mui-scroll">
         <div class="search">
-          <form id="form">
-            <input type="text" name="" placeholder="请输入搜索关键字">
-            <button class="mui-btn-blue">搜索</button>
-          </form>
+            <input type="text" name="" placeholder="请输入搜索关键字" class="search-txt">
+            <button class="search-btn mui-btn-blue">搜索</button>
         </div>
         <div class="lt_history">
           <div class="title mui-clearfix">
@@ -36,70 +34,7 @@
           </div>
           <div class="member">
             <ul>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
-              <li>
-                <span class="mui-pull-left">阿迪达斯</span>
-                <span class="mui-pull-right fa fa-close"></span>
-              </li>
+             <!--挖个坑-->
             </ul>
           </div>
         </div>
@@ -111,7 +46,7 @@
 
   <div class="lt_footer">
     <ul class="mui-clearfix">
-      <li class="now"><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+      <li><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
       <li><a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
       <li><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
       <li><a href="user.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
@@ -120,7 +55,21 @@
 </div>
 
 
+<script type="text/html" id="tpl">
+  {{each arr v i}}
+  <li>
+    <a href="searchList.html&key={{v}}" class="mui-pull-left">{{v}}</a>
+    <span class="close mui-pull-right fa fa-close" data-index="{{i}}"></span>
+  </li>
+  {{/each}}
+</script>
+
 <script src="lib/mui/js/mui.js"></script>
-<script src="js/index.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/search.js"></script>
+
+
+
 </body>
 </html>
