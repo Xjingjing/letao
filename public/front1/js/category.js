@@ -2,7 +2,8 @@
  * Created by 静 on 2017/11/1.
  */
 $(function(){
-  mui('.mui-scroll-wrapper').scroll({
+
+  var sc = mui('.mui-scroll-wrapper').scroll({
     indicators:false
   });
 
@@ -15,22 +16,19 @@ $(function(){
       $('.top_cate ul').html(template('tpl', data));
       var res = $('.top_cate ul li')[0];
       var fid = $(res).data('id');
-      $.ajax({
-        url: ' /category/querySecondCategory',
-        type: 'get',
-        data: {
-          id: fid
-        },
-        success: function (data) {
-          $('.second_cate ul').html(template('tpl1', data));
-        }
-      })
+     render(fid);
     }
   });
+
 
   $('.top_cate ul').on('click','li',function(){
     $(this).addClass('now').siblings().removeClass('now');
     var id = $(this).data('id');
+    render(id);
+    sc[1].scrollTo(0,0,500);
+  });
+
+  function render(id){
     $.ajax({
       url:' /category/querySecondCategory',
       type:'get',
@@ -41,7 +39,8 @@ $(function(){
         $('.second_cate ul').html(template('tpl1',data));
       }
     })
-  })
+  }
+
 
 });
 
