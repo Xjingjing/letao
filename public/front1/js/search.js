@@ -22,10 +22,11 @@ render();
 //删除单条记录
 $('.member ul').on('click','.close',function(){
   var btnArray = ['是','否'];
+  $that = $(this);
   mui.confirm("您确定删除这条搜索记录吗？","亲~",btnArray,function(data){
     if(data.index == 0){
       var arr = getHistory();
-      var index = $(this).data("index");
+      var index = $that.data("index");
       arr.splice(index,1);
       localStorage.setItem('lt_search_history',JSON.stringify(arr));
       render();
