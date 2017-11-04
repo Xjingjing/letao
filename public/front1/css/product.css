@@ -57,6 +57,10 @@
     margin-left: 5px;
 }
 
+.pro_size span.now{
+    background-color: #069;
+}
+
 .pro_num{
     padding:10px;
     border-bottom:1px solid #ccc;

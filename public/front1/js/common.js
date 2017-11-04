@@ -15,3 +15,9 @@ function getParam(){
 
  return obj;
 }
+
+function isLogin(data){
+  if(data.error == 400){
+    location.href = 'login.html?retUrl='+location.href;
+  }
+}
