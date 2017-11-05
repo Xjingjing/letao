@@ -10,6 +10,7 @@ $(function(){
     url:'/user/queryUserMessage',
     type:'get',
     success:function(msg){
+      isLogin(msg);
       $('.mui-media').html( template('tpl',msg) );
     }
   });

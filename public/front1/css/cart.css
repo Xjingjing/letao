@@ -1,0 +1,90 @@
+
+.lt_container{
+    padding-bottom:85px;
+}
+
+.mui-table-view .mui-media-object{
+    width: 60px;
+    height: 60px;
+    max-width: 60px;
+}
+
+.mui-media-body .pro-name{
+    color:#333;
+    height: 42px;
+}
+
+.pro-size{
+    line-height:30px;
+}
+
+.pro-size span:nth-child(1){
+    color:red;
+}
+
+.pro-size span:nth-child(2){
+    text-decoration:line-through;
+}
+
+input.ck{
+    position:absolute;
+    bottom:3px;
+    left:2px;
+}
+
+.total-price{
+    width: 100%;
+    height: 30px;
+    position:fixed;
+    z-index: 999;
+    bottom:55px;
+    background-color: #eee;
+    padding-left:10px;
+    max-width: 640px;
+    min-width: 320px;
+}
+
+.total-price p{
+    color:red;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.total-price a{
+    line-height: 30px;
+    text-align:center;
+    font-size: 12px;
+    background-color: red;
+    color:#fff;
+    padding:0 15px;
+}
+
+
+.mui-table-cell{
+    display:block;
+}
+
+
+.edit_pro_size{
+    text-align: left;
+}
+
+.edit_pro_size span{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border:1px solid #ccc;
+    background: #eee;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.edit_pro_size span.now{
+    background-color: #069;
+}
+
+.edit_pro_num{
+    text-align: left;
+}
