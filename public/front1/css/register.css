@@ -1,0 +1,62 @@
+
+form{
+    border-bottom: none;
+}
+
+.lt_content{
+    padding:10px;
+}
+
+.mui-input-group .mui-input-row{
+    height: 55px;
+}
+
+.mui-input-group input{
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,.2);
+}
+
+.code input:nth-child(1){
+    width: 55%;
+}
+
+.code a.send-code{
+    padding:0;
+    width: 35%;
+    height: 40px;
+    font-size: 17px;
+    line-height: 40px;
+}
+
+.btn-regist{
+    padding:0;
+    line-height: 40px;
+    height: 40px;
+    font-size: 17px;
+}
+
+.code a.send-code.send{
+    background-color: #999;
+    border-color: #999;
+}
+
+.regist-text{
+    padding-top:15px;
+    font-size: 12px;
+}
+
+
+
+
+
+.mui-input-group .mui-input-row:after{
+    height: 0;
+}
+
+.mui-input-group:after{
+    height: 0;
+}
+
+.mui-input-group:before{
+    height: 0;
+}
