@@ -38,6 +38,7 @@ $(function(){
 
       }
     });
+    $('.total-price span').html('00.00');
   }
 
   //删除功能
@@ -103,8 +104,9 @@ $(function(){
   //总额
   $(document).on('change','.ck',function(){
     var total = 0;
+    $('.total-price span').html('00.00');
     $(':checked').each(function(i,e){
-      total += $(this).data('price')*$(this).data('num');
+      total += +(e.dataset.price*e.dataset.num).toFixed(2);
        $('.total-price span').html(total);
     })
   })

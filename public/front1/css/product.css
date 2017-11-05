@@ -6,6 +6,8 @@
     line-height: 35px;
     position:fixed;
     bottom:0;
+    max-width: 640px;
+    min-width: 320px;
 }
 
 .lt_foot a{
